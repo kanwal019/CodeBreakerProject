@@ -50,11 +50,11 @@ function getResults(inp){
     let tempHtml = '<div class="row"><span class="col-md-6">' + inp + '</span><div class="col-md-6">';
     for(let i=0;i<inp.length;i++){
         if(inp.charAt(i)===answer.value.charAt(i)){
-            html+='<span class="glyphicon glyphicon-ok"></span>';
+            tempHtml+='<span class="glyphicon glyphicon-ok"></span>';
         }else if(answer.value.indexOf(inp.charAt(i))>-1){
-            html+='<span class="glyphicon glyphicon-transfer"></span>';
+            tempHtml+='<span class="glyphicon glyphicon-transfer"></span>';
         }else{
-            html+='<span class="glyphicon glyphicon-remove"></span>';
+            tempHtml+='<span class="glyphicon glyphicon-remove"></span>';
         }
     }
     tempHtml+='</div></div>';
